@@ -324,8 +324,8 @@
 
 
     
+    <section>
         <section style="text-align: left;">
-            
             <!-- .slide: style="text-align: left;" -->
 <h3><a id="user-content-course-content-2" class="anchor" href="#course-content-2" aria-hidden="true"></a>Course content</h3>
 <h4><a id="user-content-mathematical-methods-1" class="anchor" href="#mathematical-methods-1" aria-hidden="true"></a>Mathematical methods</h4>
@@ -336,6 +336,42 @@
 </ul>
 
             </section>
+        
+            <section style="text-align: left;">
+                <!-- .slide: style="text-align: left;" -->
+<h4><a id="user-content-mathematical-methods-2" class="anchor" href="#mathematical-methods-2" aria-hidden="true"></a>Mathematical methods</h4>
+<p>The dynamic optimization framework derives from the microeconomic behavior of agent(s):</p>
+<ul>
+<li>they perform optimal choices by maximizing a utility function that has few relevant arguments
+<ul>
+<li>consumption (in the 3 models)</li>
+<li>leisure (only in the last model)</li>
+</ul>
+</li>
+<li>they consider the complete time horizon of their remaining life</li>
+<li>they consider their budget(s) constraint(s)</li>
+</ul>
+
+            </section>
+        
+            <section style="text-align: left;">
+                <!-- .slide: style="text-align: left;" -->
+<h4><a id="user-content-mathematical-methods-3" class="anchor" href="#mathematical-methods-3" aria-hidden="true"></a>Mathematical methods</h4>
+<ul>
+<li>The differential/difference system of equations derives from the solution of the dynamic optimization problem.</li>
+<li>Tipycally the solutions are functions/rules that describes the behavior of the relevant variables of the model.</li>
+</ul>
+
+            </section>
+        
+            <section >
+                <h4><a id="user-content-mathematical-methods-4" class="anchor" href="#mathematical-methods-4" aria-hidden="true"></a>Mathematical methods</h4>
+<p><img src="choices.png" alt="choices"></p>
+
+            </section>
+        
+
+    </section>
     
 
 
@@ -384,28 +420,36 @@
 <p>Sketch of the model: the social planner problem is the simplest version maximizes</p>
 <p>$$ U(0)	=\int_{0}^{\infty}e^{-\rho t}u(c(t))dt $$</p>
 <p>s.t.</p>
-<p>$$f(k(t))	=c(t)+\dot{k}(t)+nk(t)$$
-$$k_{0}&gt;0, c(t)\geq0,k(t)\geq0 $$</p>
+<p>$$f(k(t))	=c(t)+\dot{k}(t)+nk(t)$$</p>
+<p>$$k_{0}&gt;0 , c(t),k(t)\geq0 $$</p>
+<p>$$ lim_{t\rightarrow\infty}k(t)\mu(t)=0 $$</p>
 
             </section>
         
             <section style="text-align: left;">
                 <!-- .slide: style="text-align: left;" -->
 <p>Objective: $$ U(0)	=\int_{0}^{\infty}e^{-\rho t}u(c(t))dt $$</p>
+<p class="fragment fade-down">$U(0)$ is the utility function</p>
+<p class="fragment fade-down">$\rho$ is the discount rate</p>
+<p class="fragment fade-down">$u(c(t))$ is the istantaneous felicity function that depends on consumption $c$</p>
 
             </section>
         
             <section style="text-align: left;">
                 <!-- .slide: style="text-align: left;" -->
 <p>Resources constraint:$$f(k(t))	=c(t)+\dot{k}(t)+nk(t)$$</p>
+<p class="fragment fade-down">$f(k(t))$ is production achieved with technology $f$ that uses $k$ capital (per capita)</p>
+<p class="fragment fade-down">$\dot{k}(t)$ is the change in time of the capital stock due to investment</p>
+<p class="fragment fade-down">$n$ is the growth rate of the population</p>
 
             </section>
         
             <section style="text-align: left;">
                 <!-- .slide: style="text-align: left;" -->
 <p>Additional constraints:
-$$k_{0}&gt;0, c(t)\geq0,k(t)\geq0 $$
-TVC</p>
+$$k_{0}&gt;0 $$</p>
+<p>$$lim_{t\rightarrow\infty}k(t)\mu(t)=0 $$</p>
+<p>$$c(t),k(t)\geq0 $$</p>
 
             </section>
         
@@ -454,6 +498,9 @@ TVC</p>
 <p>Sketch of the model: time (discrete) represents the span of a generation (we will see 2 and 3 generations versions) and generations overlap. Population is $N_{t}$.</p>
 <p>The problem of an agent that is born generation is
 $$max,u(c_{1t})+(1+\rho)^{-1}u(c_{2t+1})$$ subject to budget constraints.</p>
+<p class="fragment fade-down">$c_{1t}$ is consumption when young indexed by $1$</p>
+<p class="fragment fade-down">$c_{2t}$ is consumption when young indexed by $2$</p>
+<p class="fragment fade-down">of course with more generations you could have more indexes (aggregation issues)</p>
 
             </section>
         
@@ -538,7 +585,7 @@ $$max,u(c_{1t})+(1+\rho)^{-1}u(c_{2t+1})$$ subject to budget constraints.</p>
             
             <!-- .slide: style="text-align: left;" -->
 <h3><a id="user-content-model-3---nkm-2" class="anchor" href="#model-3---nkm-2" aria-hidden="true"></a>Model 3 - NKM</h3>
-<p>The core model NKM is composed of three equations (after having solved for optimal decisions)</p>
+<p>The core model NKM is composed of three equations (after having solved for optimal decisions we have the dynamical system)</p>
 <span>
 \[\begin{aligned}
 \widetilde{y}_{t} &amp; =E_{t}\widetilde{y}_{t+1}-\sigma\left[i_{t}-E_{t}\left\{ \pi_{t+1}\right\} \right]+u_{t}^{IS} \\
